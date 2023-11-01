@@ -21,7 +21,9 @@ pub fn main() void {
     const data: [*]const u8 = "Weird Data!";
 
     // Please cast 'data' to 'printable':
-    const printable: [*:0]const u8 = ???;
+    const printable: [*:0]const u8 = @ptrCast(data);
+    // @compileLog(data);
+    // @compileLog(printable);
 
     print("{s}\n", .{printable});
 }
