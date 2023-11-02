@@ -60,5 +60,7 @@ fn isPangram(str: []const u8) bool {
     // and if so, we know the given string is a pangram
     //
     // but what do we have to compare?
-    return bits == 0x..???;
+    // print("0b{b:0>8} 0x{x:0>3}\n", .{ 26, 26 });
+    // print("bits = 0b{b:0>32} 0x{x:0>8} {d}\n", .{bits} ** 3);
+    return bits == 0x3ffffff;
 }
